@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">MyWeatherApp</string>
+    <string name="moscow">Moscow</string>
+    <string name="london">London</string>
+    <string name="paris">Paris</string>
+    <string name="new_york">New York</string>
+    <string name="lesnoy_gorodok">Lesnoy Gorodok</string>
+    <string name="description_of_weather">Description</string>
+    <string name="name_of_city">City</string>
+    <string name="temperature">Temperature</string>
+    <string name="description_image_of_weather">Image of weather</string>
+    <string name="humidity">Humidity:</string>
+    <string name="pressure">"Pressure: "</string>
+    <string name="feels_like">"Feels Like: "</string>
+    <string name="max_temperature">"Max Temperature: "</string>
+    <string name="min_temperature">"Min Temperature: "</string>
+    <string name="what_s_the_weather_like">What\'s the weather like?</string>
+
+
     <string-array name="cities">
-        <item name="moscow">Moscow</item>
-        <item name="london">London</item>
-        <item name="paris">Paris</item>
-        <item name="new_york">New York</item>
-        <item name="lesnoy_gorodok">Lesnoy Gorodok</item>
+        <item name="moscow">@string/moscow</item>
+        <item name="london">@string/london</item>
+        <item name="paris">@string/paris</item>
+        <item name="new_york">@string/new_york</item>
+        <item name="lesnoy_gorodok">@string/lesnoy_gorodok</item>
     </string-array>
 </resources>

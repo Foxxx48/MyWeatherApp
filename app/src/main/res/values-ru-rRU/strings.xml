@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyWeatherApp</string>
+    <string name="moscow">Москва</string>
+    <string name="london">Лондон</string>
+    <string name="paris">Париж</string>
+    <string name="new_york">Нью-Йорк</string>
+    <string name="lesnoy_gorodok">Лесной городок</string>
+    <string name="description_of_weather">Описание погоды</string>
+    <string name="name_of_city">Город</string>
+    <string name="temperature">Температура</string>
+    <string name="description_image_of_weather">изображение погоды</string>
+    <string name="humidity">"Влажность: "</string>
+    <string name="pressure">"Давление: "</string>
+    <string name="feels_like">"Ощущается: "</string>
+    <string name="max_temperature">"Макс. температура: "</string>
+    <string name="min_temperature">"Мин. температура: "</string>
+    <string name="what_s_the_weather_like">Что с погодой?</string>
+</resources>

@@ -39,24 +39,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="603dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Dysplay weather"
-        app:layout_constraintStart_toStartOf="@+id/gl_start"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        android:visibility="invisible"/>
+        app:layout_constraintGuide_begin="669dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="63dp" />
+        app:layout_constraintGuide_begin="131dp" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
@@ -75,7 +65,7 @@
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/description_of_weather"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +78,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="City"
+                android:text="@string/name_of_city"
                 android:textAlignment="center"
                 android:textSize="34sp"
                 android:textStyle="bold"
@@ -101,7 +91,7 @@
                 android:id="@+id/tv_temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Temperature"
+                android:text="@string/temperature"
                 android:textSize="34sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +104,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_city"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/description_image_of_weather" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
@@ -151,13 +142,13 @@
                         android:id="@+id/textViewHumidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity: " />
+                        android:text="@string/humidity" />
 
                     <TextView
                         android:id="@+id/tv_humidity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity" />
+                        android:text="@string/humidity" />
 
                 </TableRow>
 
@@ -169,13 +160,13 @@
                         android:id="@+id/textViewPressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressure: " />
+                        android:text="@string/pressure" />
 
                     <TextView
                         android:id="@+id/tv_pressure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pressure" />
+                        android:text="@string/pressure" />
                 </TableRow>
 
                 <TableRow
@@ -186,13 +177,13 @@
                         android:id="@+id/textViewFeelsLike"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feels Like: " />
+                        android:text="@string/feels_like" />
 
                     <TextView
                         android:id="@+id/tv_feels_like"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feels like" />
+                        android:text="@string/feels_like" />
                 </TableRow>
 
                 <TableRow
@@ -203,13 +194,13 @@
                         android:id="@+id/textViewMaxTemp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Max Temperature: " />
+                        android:text="@string/max_temperature" />
 
                     <TextView
                         android:id="@+id/tv_max_temp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Max temp" />
+                        android:text="@string/max_temperature" />
                 </TableRow>
 
                 <TableRow
@@ -220,13 +211,13 @@
                         android:id="@+id/textViewMinTemp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Min Temperature: " />
+                        android:text="@string/min_temperature" />
 
                     <TextView
                         android:id="@+id/tv_min_temp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Min temp" />
+                        android:text="@string/min_temperature" />
                 </TableRow>
             </TableLayout>
 
@@ -236,9 +227,23 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:entries="@array/cities"
         app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toStartOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start" />
+
+    <TextView
+        android:id="@+id/textViewWhatsNew"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/what_s_the_weather_like"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toStartOf="@+id/gl_end"
         app:layout_constraintStart_toStartOf="@+id/gl_start"
         app:layout_constraintTop_toTopOf="@+id/gl_top" />
