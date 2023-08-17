@@ -1,12 +1,11 @@
 package com.fox.myweatherapp.presentation
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.fox.myweatherapp.data.RetrofitHelper
@@ -74,15 +73,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setViews() {
         binding.tvCity.text = weatherDataModel?.name ?: "None"
-        binding.tvTemperature.text = "${weatherDataModel?.main?.temp.toString()}°"
+        binding.tvTemperature.text = "${weatherDataModel?.main?.temp?.toInt()}°"
         binding.tvDescription.text = weatherDataModel?.weather?.component1()?.description
-        binding.tvMaxTemp.text = weatherDataModel?.main?.tempMax.toString()
-        binding.tvMinTemp.text = weatherDataModel?.main?.tempMin.toString()
-        binding.tvPressure.text = weatherDataModel?.main?.pressure.toString()
-        binding.tvHumidity.text = weatherDataModel?.main?.humidity.toString()
-        binding.tvFeelsLike.text = weatherDataModel?.main?.feelsLike.toString()
+        binding.tvMaxTemp.text = "${ weatherDataModel?.main?.tempMax?.toInt() }°"
+        binding.tvMinTemp.text = "${weatherDataModel?.main?.tempMin?.toInt()}°"
+        binding.tvPressure.text = "${weatherDataModel?.main?.pressure.toString()} мм. рт. ст."
+        binding.tvHumidity.text = "${weatherDataModel?.main?.humidity?.toInt()}%"
+        binding.tvFeelsLike.text = "${weatherDataModel?.main?.feelsLike?.toInt()}°"
 
         Glide.with(this@MainActivity)
             .load("file:///android_asset/day_icons/ic_02d.png")
